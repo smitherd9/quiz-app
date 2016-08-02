@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+/*span {
+	margin-bottom: 10px;
+
+}*/
+
+body {
+	background-color: cornflowerblue;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: beige;
+  font-weight: 700;
+  font-size: 5em;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.congo {
+
+}
+
+.indonesia {
+	display: none;
+}
+
+.brazil {
+	display: none;
+}
+
+.estonia {
+	display: none;
+}
+
+.peru {
+	display: none;
+}
+
+.submit {
+	padding: 10px;
+    background-color: rgba(0, 56, 175, 0.54);
+    border-radius: 5px;
+    border: 2px;
+    margin-top: 15px;
+    /*display: none;*/
+}
+
+#next {
+	padding: 10px;
+    background-color: rgba(0, 56, 175, 0.54);
+    border-radius: 5px;
+    border: 2px;
+    margin-top: 15px;
+}
+
+#score {
+  color: #f39c12;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+#questionNum {
+  color: #f39c12;
+  font-weight: 700;
+  font-size: 1.5em;
+}
