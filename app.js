@@ -1,171 +1,231 @@
 $(document).ready(function() {
 
-            // var question1 = Object.create(Quiz);
+    // var question1 = Object.create(Quiz);
 
 
-            // var QuizQuestions = function(question, solutions, answer) {
-            //     this.question = question;
-            //     this.solutions = solutions;
-            //     this.answer = answer;
+    // var QuizQuestions = function(question, solutions, answer) {
+    //     this.question = question;
+    //     this.solutions = solutions;
+    //     this.answer = answer;
 
-            // };
+    // };
 
-            var Quiz = {
-                questions: [{
-                        question: "What is the capital of the Democratic Republic of Congo?",
-                        solutions: ['Nairobi', 'Kinshasa', 'Cape Town', 'Baku'],
-                        answer: 1
-                    }, {
-                        question: "What is the capital of Indonesia?",
-                        solutions: ['Singapore', 'Jakarta', 'Ulaanbaatar', 'Kyoto'],
-                        answer: 1
+    var Quiz = {
+        questions: [{
+                question: "What is the capital of the Democratic Republic of Congo?",
+                solutions: ['Nairobi', 'Kinshasa', 'Cape Town', 'Baku'],
+                answer: 1
+            }, {
+                question: "What is the capital of Indonesia?",
+                solutions: ['Singapore', 'Jakarta', 'Ulaanbaatar', 'Kyoto'],
+                answer: 1
 
-                    }, {
-                        question: "What is the capital of Brazil?",
-                        solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
-                        answer: 3
+            }, {
+                question: "What is the capital of Brazil?",
+                solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
+                answer: 3
 
-                    }, {
-                        question: "What is the capital of Estonia?",
-                        solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
-                        answer: 1
+            }, {
+                question: "What is the capital of Estonia?",
+                solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
+                answer: 1
 
-                    }, {
-                        question: "What is the capital of Peru?",
-                        solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
-                        answer: 2
+            }, {
+                question: "What is the capital of Peru?",
+                solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
+                answer: 2
 
-                    }
+            }
 
-                ]
+        ]
 
-            };
+    };
 
-            randomQuestion();
-
-            // question1();
-
-            //Global Variables
-            var score = 0;
-            var questionNum = 0;
-            var userAnswers = [];
-            var randomQ;
-            var currentQuestion = 0;
-            var totalQuestions = Quiz.questions.length;
-            var chosenQuestions = [];
-
-// Choose a question from the questions array at random
-
-            function randomQuestion() {
-            	randomQ = Quiz.questions[Math.floor(Math.random()*Quiz.questions.length)];
-            	console.log(randomQ);
-            	// $('.content').append('<h2>' + randomQ.question.solutions + '</h2>');
-            	nextQuestion();
-            	
-
-            };
-            // var currentQuestion = Quiz.questions[0];
-
-			question1();
-
-            $('.question').submit(function(event) {
-            	event.preventDefault();
-            	var input = parseInt($('input[name=solution]:checked', '.question').val(), 10);
-            	console.log(input);
-            	userAnswers.push(input);
-            	console.log(userAnswers + " pushed");
-            	questionNum++;
-            	$('#questionNum').text(questionNum);
-            	checkAnswers();
-            	randomQuestion();
-
-            	// nextQuestion();
-
-            	function checkAnswers() {
-            	if (input === randomQ.answer) {
-                    // alert("You are correct!");
-                    score++;
-                    $('#score').text(score);
-
-                    }
-
-                else {
-                    alert("Sorry, dude!");
-                    };                
-
-            };
-
-        });
-
-
-            function nextQuestion() {
-                	if (questionNum < Quiz.questions.length) {
-                	$('<h2>' + randomQ.question + '</h2>').replaceAll('.content');                	
-            		$("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>").replaceAll('.content');
-            		$("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>").replaceAll('.content');
-            		$("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>").replaceAll('.content');
-            		$("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span>").replaceAll('.content');
-
-                	}
-                };
-
-
-            // $('.submit').click(){
-
-            // }
+    // $(document).ready(function() {
+    // $('.startScreen').show();
+    // $('.start').show();
 
 
 
-            function question1(){
-             $('.content').append('<h2>' + randomQ.question  + '</h2>');
-                $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>");
-                $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>");
-                $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>");
-                $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span>");
-            };
+    // randomQuestion();
 
-            // function question2(){
-            // 	$('<h2>' + Quiz.questions[1].question + '</h2>').replaceAll('.content');
-            // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>").replaceAll('.content');
-            // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>").replaceAll('.content');
-            // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>").replaceAll('.content');
-            // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>").replaceAll('.content');
+    // question1();
 
-            //  // $('.content').append('<h2>' + Quiz.questions[1].question + '</h2>');
-            //  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
-            //  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
-            //  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
-            //  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
-            // };
+    //Global Variables
+    var score = 0;
+    var questionNum = 0;
+    var userAnswers = [];
+    var randomQ;
+    var currentQuestion = 0;
+    var totalQuestions = Quiz.questions.length;
+    var chosenQuestions = [];
+    createQuestion(Quiz.questions[questionNum]);
+    // Choose a question from the questions array at random
 
-            });
+    // function randomQuestion() {
+    //     randomQ = Quiz.questions[Math.floor(Math.random() * Quiz.questions.length)];
+    //     console.log(randomQ);
+
+    //     // $('.content').append('<h2>' + randomQ.question.solutions + '</h2>');
+    //     createQuestion();
 
 
+    // };
+    // var currentQuestion = Quiz.questions[0];
+
+    // question1();
+
+    $('.question').submit(function(event) {
+        event.preventDefault();
+        var input = $('input[name=solution]:checked').val();
+        // console.log(input);
+        userAnswers.push(input);
+        console.log(userAnswers + " pushed");
+        checkAnswers(Quiz.questions[questionNum], input);
+        questionNum++;
+        if (questionNum >= Quiz.questions.length) {
+            // give feedback? tell them it is the end
+        } else {
+        	$('.content').removeClass('animated zoomIn')
+            $('#questionNum').text(questionNum);
+            setTimeout(function(){
+            	createQuestion(Quiz.questions[questionNum]);
+            }, 500);
             
+        }
+
+        // create the second question, the third, 
+
+        // randomQuestion();
+
+        // nextQuestion();
 
 
 
-            // 
-            //     
-            //     var input = parseInt($('#userGuess').val(), 10); // Submit the form, parse the actual input number
-            //     // check to see whether input exists in some guesses array.
-            //     // if it is not there, then push it to the global array
+    });
 
-            //     $('#userGuess').val("");
+    function checkAnswers(question, input) {
+        if (question !== undefined) {
+            if (input == question.answer) {
+                // alert("You are correct!");
+                score++;
+                $('#score').text(score);
+                // return true;
+            } else if (isNaN(input)) {
+                alert("Please make a selection.")
+                    // return false;
+            }
+        } else {
+            alert("Sorry, dude!");
+            // return false;
+        };
+
+    };
+    // function nextQuestion() {
+    //     if (questionNum < Quiz.questions.length) {
+    //         $('<h2>' + randomQ.question + '</h2>').replaceAll('.content');
+    //         $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span><br/>");
+
+    //     }
+
+    //$('.content').append('<h2>' + randomQ.question + '</h2>');
+    //  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
 
 
-                // $('.congo').submit(function(event) {
-                //     event.preventDefault();
 
-                //     if $('input[name=radioName]:checked', '.congo').val() {
-                //         alert("You are correct!");
-                //     }
+    // $('.submit').click(){
 
-                //     else {
-                //         alert("Try again!");
-                //     };
+    // }
+
+    function createQuestion(question) {
+        // if (questionNum < totalQuestions && chosenQuestions.indexOf(randomQ) == -1) {
+        // chosenQuestions.push(randomQ); // Store already asked questions in array to not ask them again.
+        // console.log(chosenQuestions);
+        $('#questionNum').text(questionNum + 1);
+        $('.content').text('');
+        $('.content').addClass('animated zoomIn')
+        $('.content').append('<h2>' + question.question + '</h2>');
+        $('.content').append("<input type='radio' value='0' name='solution'><span>" + question.solutions[0] + "</span><br/>");
+        $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + question.solutions[1] + "</span><br/>");
+        $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + question.solutions[2] + "</span><br/>");
+        $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + question.solutions[3] + "</span>");
+        // }
+    };
 
 
-                // });
+});
 
-               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function question2(){
+// 	$('<h2>' + Quiz.questions[1].question + '</h2>').replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>").replaceAll('.content');
+
+//  // $('.content').append('<h2>' + Quiz.questions[1].question + '</h2>');
+//  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
+// };
+
+
+
+
+
+
+
+
+// 
+//     
+//     var input = parseInt($('#userGuess').val(), 10); // Submit the form, parse the actual input number
+//     // check to see whether input exists in some guesses array.
+//     // if it is not there, then push it to the global array
+
+//     $('#userGuess').val("");
+
+
+// $('.congo').submit(function(event) {
+//     event.preventDefault();
+
+//     if $('input[name=radioName]:checked', '.congo').val() {
+//         alert("You are correct!");
+//     }
+
+//     else {
+//         alert("Try again!");
+//     };
+
+
+// });

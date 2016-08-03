@@ -8,7 +8,7 @@
 }*/
 
 body {
-	background-color: cornflowerblue;
+	background-color: #6e61c4;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -16,58 +16,78 @@ h1 {
   color: beige;
   font-weight: 700;
   font-size: 5em;
+  margin-top: -86px;
+}
+
+p {
+  font-size: 2em;
+  font-weight: 300;
 }
 
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto;  
+        
+        
 }
 
-.congo {
+/*.startScreen {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #048edd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  display: none;
 
 }
 
-.indonesia {
-	display: none;
-}
+.start {
+  padding: 10px;
+    background-color: #57ba68;
+    border-radius: 5px;
+    border: 2px;
+    margin-top: 15px;
+    display: none;
+}*/
 
-.brazil {
-	display: none;
-}
 
-.estonia {
-	display: none;
-}
-
-.peru {
-	display: none;
-}
 
 .submit {
 	padding: 10px;
-    background-color: rgba(0, 56, 175, 0.54);
+    background-color: #57ba68;
     border-radius: 5px;
     border: 2px;
     margin-top: 15px;
     /*display: none;*/
 }
 
-#next {
-	padding: 10px;
-    background-color: rgba(0, 56, 175, 0.54);
-    border-radius: 5px;
-    border: 2px;
-    margin-top: 15px;
-}
+
 
 #score {
-  color: #f39c12;
+  color: #540d53;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 2em;
+
+}
+
+#scoreCount {
+  float: right;
+  margin: auto;
+  margin-right: 55px;
+  color: beige;
 }
 
 #questionNum {
-  color: #f39c12;
+  color: #540d53;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+#questionCount {
+  margin-left: 55px;
+  color: beige;
 }
