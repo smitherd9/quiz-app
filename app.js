@@ -41,7 +41,13 @@ $(document).ready(function() {
 
     };
 
-    randomQuestion();
+    // $(document).ready(function() {
+    // $('.startScreen').show();
+    // $('.start').show();
+
+
+
+    // randomQuestion();
 
     // question1();
 
@@ -53,92 +59,148 @@ $(document).ready(function() {
     var currentQuestion = 0;
     var totalQuestions = Quiz.questions.length;
     var chosenQuestions = [];
-
+    createQuestion(Quiz.questions[questionNum]);
     // Choose a question from the questions array at random
 
-    function randomQuestion() {
-        randomQ = Quiz.questions[Math.floor(Math.random() * Quiz.questions.length)];
-        console.log(randomQ);
-        // $('.content').append('<h2>' + randomQ.question.solutions + '</h2>');
-        nextQuestion();
+    // function randomQuestion() {
+    //     randomQ = Quiz.questions[Math.floor(Math.random() * Quiz.questions.length)];
+    //     console.log(randomQ);
+
+    //     // $('.content').append('<h2>' + randomQ.question.solutions + '</h2>');
+    //     createQuestion();
 
 
-    };
+    // };
     // var currentQuestion = Quiz.questions[0];
 
-    question1();
+    // question1();
 
     $('.question').submit(function(event) {
         event.preventDefault();
-        var input = parseInt($('input[name=solution]:checked', '.question').val(), 10);
-        console.log(input);
+        var input = $('input[name=solution]:checked').val();
+        // console.log(input);
         userAnswers.push(input);
         console.log(userAnswers + " pushed");
+        checkAnswers(Quiz.questions[questionNum], input);
         questionNum++;
-        $('#questionNum').text(questionNum);
-        checkAnswers();
-        randomQuestion();
+        if (questionNum >= Quiz.questions.length) {
+            // give feedback? tell them it is the end
+        } else {
+        	$('.content').removeClass('animated zoomIn')
+            $('#questionNum').text(questionNum);
+            setTimeout(function(){
+            	createQuestion(Quiz.questions[questionNum]);
+            }, 500);
+            
+        }
+
+        // create the second question, the third, 
+
+        // randomQuestion();
 
         // nextQuestion();
 
-        function checkAnswers() {
-            if (input == randomQ.answer) {
-                // alert("You are correct!");
-                score++;
-                $('#score').text(score);
 
-            } else if (input == NaN) {
-                alert("Please make a selection.")
-            } else {
-                alert("Sorry, dude!");
-            };
-
-        };
 
     });
 
+    function checkAnswers(question, input) {
+        if (question !== undefined) {
+            if (input == question.answer) {
+                // alert("You are correct!");
+                score++;
+                $('#score').text(score);
+                // return true;
+            } else if (isNaN(input)) {
+                alert("Please make a selection.")
+                    // return false;
+            }
+        } else {
+            alert("Sorry, dude!");
+            // return false;
+        };
 
-    function nextQuestion() {
-        if (questionNum < Quiz.questions.length) {
-            $('<h2>' + randomQ.question + '</h2>').replaceAll('.content');
-            $("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>").replaceAll('.content');
-            $("<input type='radio' value='1' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>").replaceAll('.content');
-            $("<input type='radio' value='2' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>").replaceAll('.content');
-            $("<input type='radio' value='3' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span>").replaceAll('.content');
-
-        }
     };
+    // function nextQuestion() {
+    //     if (questionNum < Quiz.questions.length) {
+    //         $('<h2>' + randomQ.question + '</h2>').replaceAll('.content');
+    //         $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>");
+    //         $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span><br/>");
+
+    //     }
+
+    //$('.content').append('<h2>' + randomQ.question + '</h2>');
+    //  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
+    //  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
+
 
 
     // $('.submit').click(){
 
     // }
 
-
-
-    function question1() {
-        $('.content').append('<h2>' + randomQ.question + '</h2>');
-        $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>");
-        $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>");
-        $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>");
-        $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span>");
+    function createQuestion(question) {
+        // if (questionNum < totalQuestions && chosenQuestions.indexOf(randomQ) == -1) {
+        // chosenQuestions.push(randomQ); // Store already asked questions in array to not ask them again.
+        // console.log(chosenQuestions);
+        $('#questionNum').text(questionNum + 1);
+        $('.content').text('');
+        $('.content').addClass('animated zoomIn')
+        $('.content').append('<h2>' + question.question + '</h2>');
+        $('.content').append("<input type='radio' value='0' name='solution'><span>" + question.solutions[0] + "</span><br/>");
+        $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + question.solutions[1] + "</span><br/>");
+        $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + question.solutions[2] + "</span><br/>");
+        $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + question.solutions[3] + "</span>");
+        // }
     };
 
-    // function question2(){
-    // 	$('<h2>' + Quiz.questions[1].question + '</h2>').replaceAll('.content');
-    // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>").replaceAll('.content');
-    // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>").replaceAll('.content');
-    // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>").replaceAll('.content');
-    // 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>").replaceAll('.content');
-
-    //  // $('.content').append('<h2>' + Quiz.questions[1].question + '</h2>');
-    //  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
-    // };
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function question2(){
+// 	$('<h2>' + Quiz.questions[1].question + '</h2>').replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>").replaceAll('.content');
+// 	$("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>").replaceAll('.content');
+
+//  // $('.content').append('<h2>' + Quiz.questions[1].question + '</h2>');
+//  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
+//  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
+// };
+
+
 
 
 
