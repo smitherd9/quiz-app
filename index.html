@@ -6,37 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="World Capitals Quiz">
     <title>World Capitals Quiz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
-
 </head>
+
 <body>
-	<p id="scoreCount">Score =<span id="score">0</span>correct</p>
+    <p id="scoreCount">Score =<span id="score">0</span>correct</p>
     <p id="questionCount">Question <span id="questionNum">1</span>out of 5</p>
+    <button class='newgame'>New Game</button>
     <div class="container">
-        <h1 class="animated pulse">The World Capitals Quiz!</h1>
+        <h1 class="quiz-title">The World Capitals Quiz!</h1>
+        <div class="startScreen">
+            <div class="content">
+                <div>
+                    <p>Welcome to the World Capitals Quiz!</p>
+                    <p>This quiz will test your knowledge of capital cities around the world.</p>
+                    <p>When you're ready to play, click the start button!</p>
+                    <button class="start">START</button>
+                </div>
+            </div>
+        </div>
 
 
-        <!-- <div class="startScreen">
-				<div class="content">
-					
-					<div>
-						<h1 class="animated pulse">The World Capitals Quiz!</h1>
-						<p>This quiz will test your knowledge of capital cities around the world.</p>
-						<p>When you're ready to play, click the start button!</p>
-						<a class="start" href="#">START</a>
-					</div>
-				</div>
-			</div> -->
+        <div class="gameOver">            
+            	<p></p>             
+        </div> 
 
-        <form class="question">
-            <div class="content"></div>
-            
+        	<div class="userFeedback">
+        		<p></p>
+        	</div>
+        
+        
+        
+
+        <form class="question">        		
+            <div class="content">
+            	
+        	</div>
+        	
             <button class="submit">Submit Your Answer!</button>
-                        
-        </form>        
+        </form>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
