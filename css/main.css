@@ -16,22 +16,34 @@ h1 {
   color: beige;
   font-weight: 700;
   font-size: 5em;
-  margin-top: -86px;
+  margin-top: 0.2em;
 }
 
 p {
   font-size: 2em;
   font-weight: 300;
+  /*text-align: center;*/
+  margin: 0 auto;
+}
+
+div p {
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .container {
   max-width: 600px;
-  margin: 0 auto;  
-        
+  margin: 0 auto;          
         
 }
 
-/*.startScreen {
+/*.content a {
+  text-align: center;
+}*/
+
+.startScreen {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -45,14 +57,92 @@ p {
 
 }
 
+.quiz-title {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+
+.content {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+
+}
+
+
+/******   Buttons   ******/
+
 .start {
   padding: 10px;
-    background-color: #57ba68;
-    border-radius: 5px;
-    border: 2px;
-    margin-top: 15px;
-    display: none;
-}*/
+  text-align: center;
+  font-size: 36px;
+  background-color: #6e61c4;
+  border-radius: 10%;
+  border: 2px solid;
+  margin-top: 6em;
+  margin-left: 18em;     
+  display: none;
+}
+
+.newgame {
+  padding: 10px;
+  text-align: center;
+  font-size: 36px;
+  background-color: #048edd;
+  border-radius: 10%;
+  border: 2px solid;
+  margin: 58px;
+  position: relative;
+  z-index: 2000;
+  /*margin-top: 6em;*/
+  float: right;
+  /*margin: auto;*/
+  /*margin-right: 55px;   */
+  
+}
+
+
+.userFeedback {
+  width: 30%;
+  height: 30%;
+  color: #fff;
+  font-size: 28px;
+  background: #048edd;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 0.75em;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  display: none;
+  
+
+}
+
+
+.gameOver {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #048edd;
+  font-size: 28px;
+  border-radius: 10px;
+  border: 2px solid;
+  position: absolute;
+  padding: 0.75em;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  display: none;
+  /*-webkit-animation-duration: 1000ms;
+  -webkit-animation-delay: 200ms;
+  -webkit-animation-iteration-count: 1;*/
+}
 
 
 
@@ -67,6 +157,9 @@ p {
 
 
 
+/******   Scorekeeping   ******/
+
+
 #score {
   color: #540d53;
   font-weight: 700;
@@ -79,15 +172,22 @@ p {
   margin: auto;
   margin-right: 55px;
   color: beige;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
 }
 
 #questionNum {
   color: #540d53;
   font-weight: 700;
   font-size: 2em;
+
 }
 
 #questionCount {
   margin-left: 55px;
   color: beige;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
 }
