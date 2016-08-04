@@ -94,7 +94,7 @@
             }, {
                 question: "What is the capital of Australia?",
                 solutions: ['Canberra', 'Ottawa', 'Sydney', 'Karachi'],
-                answer: 2
+                answer: 0
 
             }, {
                 question: "What is the capital of Tajikistan?",
