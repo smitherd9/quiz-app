@@ -19,99 +19,99 @@
                 question: "What is the capital of Indonesia?",
                 solutions: ['Singapore', 'Jakarta', 'Ulaanbaatar', 'Kyoto'],
                 answer: 1
-            }
+            
 
-            // }, {
-            //     question: "What is the capital of Brazil?",
-            //     solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of Brazil?",
+                solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
+                answer: 3            
 
-            // }, {
-            //     question: "What is the capital of Estonia?",
-            //     solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
-            //     answer: 1
+            }, {
+                question: "What is the capital of Estonia?",
+                solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
+                answer: 1
 
-            // }, {
-            //     question: "What is the capital of Peru?",
-            //     solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
-            //     answer: 2
+            }, {
+                question: "What is the capital of Peru?",
+                solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
+                answer: 2
 
-            // }, {
-            //     question: "The capital of Laos is ",
-            //     solutions: ['Anchorage', 'Hanoi', 'Vientiane', 'Beirut'],
-            //     answer: 2
+            }, {
+                question: "The capital of Laos is ",
+                solutions: ['Anchorage', 'Hanoi', 'Vientiane', 'Beirut'],
+                answer: 2
 
-            // }, {
-            //     question: "The capital of Liberia is ",
-            //     solutions: ['Monrovia', 'Pristina', 'Atlanta', 'Sicily'],
-            //     answer: 0
+            }, {
+                question: "The capital of Liberia is ",
+                solutions: ['Monrovia', 'Pristina', 'Atlanta', 'Sicily'],
+                answer: 0
 
-            // }, {
-            //     question: "What is the capital of the United Kingdom?",
-            //     solutions: ['Seattle', 'Toronto', 'Rome', 'London'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of the United Kingdom?",
+                solutions: ['Seattle', 'Toronto', 'Rome', 'London'],
+                answer: 3
 
-            // }, {
-            //     question: "What is the capital of Jordan?",
-            //     solutions: ['Amman', 'Damascus', 'Kingston', 'San Diego'],
-            //     answer: 0
+            }, {
+                question: "What is the capital of Jordan?",
+                solutions: ['Amman', 'Damascus', 'Kingston', 'San Diego'],
+                answer: 0
 
-            // }, {
-            //     question: "What is the capital of Honduras?",
-            //     solutions: ['Budapest', 'Dublin', 'Tegucigalpa', 'Varanasi'],
-            //     answer: 2
+            }, {
+                question: "What is the capital of Honduras?",
+                solutions: ['Budapest', 'Dublin', 'Tegucigalpa', 'Varanasi'],
+                answer: 2
 
-            // }, {
-            //     question: "What is the capital of Kyrgyzstan?",
-            //     solutions: ['Moscow', 'Maseru', 'Vaduz', 'Bishkek'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of Kyrgyzstan?",
+                solutions: ['Moscow', 'Maseru', 'Vaduz', 'Bishkek'],
+                answer: 3
 
-            // }, {
-            //     question: "The capital of Equatorial Guinea is ",
-            //     solutions: ['Helsinki', 'Malabo', 'Banjul', 'Riga'],
-            //     answer: 1
+            }, {
+                question: "The capital of Equatorial Guinea is ",
+                solutions: ['Helsinki', 'Malabo', 'Banjul', 'Riga'],
+                answer: 1
 
-            // }, {
-            //     question: "The capital of Ghana is ",
-            //     solutions: ['Accra', 'Tallinn', 'Suva', 'Tbilisi'],
-            //     answer: 0
+            }, {
+                question: "The capital of Ghana is ",
+                solutions: ['Accra', 'Tallinn', 'Suva', 'Tbilisi'],
+                answer: 0
 
-            // }, {
-            //     question: "What is the capital of Djibouti?",
-            //     solutions: ['Roseau', 'Djibouti', 'Nicosia', 'Quito'],
-            //     answer: 1
+            }, {
+                question: "What is the capital of Djibouti?",
+                solutions: ['Roseau', 'Djibouti', 'Nicosia', 'Quito'],
+                answer: 1
 
-            // }, {
-            //     question: "What is the capital of Burkina Faso?",
-            //     solutions: ['Sofia', 'Ottawa', 'Sarajevo', 'Ouagadougou'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of Burkina Faso?",
+                solutions: ['Sofia', 'Ottawa', 'Sarajevo', 'Ouagadougou'],
+                answer: 3
 
-            // }, {
-            //     question: "What is the capital of Oman?",
-            //     solutions: ['Suva', 'Asmara', 'Addis Ababa', 'Muscat'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of Oman?",
+                solutions: ['Suva', 'Asmara', 'Addis Ababa', 'Muscat'],
+                answer: 3
 
-            // }, {
-            //     question: "What is the capital of Australia?",
-            //     solutions: ['Canberra', 'Ottawa', 'Sydney', 'Karachi'],
-            //     answer: 2
+            }, {
+                question: "What is the capital of Australia?",
+                solutions: ['Canberra', 'Ottawa', 'Sydney', 'Karachi'],
+                answer: 2
 
-            // }, {
-            //     question: "What is the capital of Tajikistan?",
-            //     solutions: ['Reykjavik', 'Dushanbe', 'Taipei', 'Dodoma'],
-            //     answer: 1
+            }, {
+                question: "What is the capital of Tajikistan?",
+                solutions: ['Reykjavik', 'Dushanbe', 'Taipei', 'Dodoma'],
+                answer: 1
 
-            // }, {
-            //     question: "The capital of Uganda is ",
-            //     solutions: ['Edinburgh', 'Port Vila', 'Montevideo', 'Kampala'],
-            //     answer: 3
+            }, {
+                question: "The capital of Uganda is ",
+                solutions: ['Edinburgh', 'Port Vila', 'Montevideo', 'Kampala'],
+                answer: 3
 
-            // }, {
-            //     question: "What is the capital of Turkmenistan?",
-            //     solutions: ['Turkmen City', 'Ashgabat', 'Baghdad', 'Tripoli'],
-            //     answer: 3
+            }, {
+                question: "What is the capital of Turkmenistan?",
+                solutions: ['Turkmen City', 'Ashgabat', 'Baghdad', 'Tripoli'],
+                answer: 3
 
-            // } 
+            } 
 
 
 
@@ -164,6 +164,10 @@ $('.start').fadeIn(500);
 
     // question1();
 
+
+
+    // jQuery extention to handle css animations
+
     $.fn.extend({
     animateCss: function (animationName) {
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -173,30 +177,28 @@ $('.start').fadeIn(500);
     }
 });
 
+
+    // Event listener and function for New Game button click
+
     $('.newgame').click(function(){
-    		$('.gameOver').fadeOut(1000);
-    		// $('.content').removeClass('animated zoomIn');
-   //  		$('#scoreCount').removeClass('animated slideInRight');
-			// $('#questionCount').removeClass('animated slideInLeft');
-			// $('#scoreCount').removeClass('animated flipInX');
-			// $('#questionCount').removeClass('animated flipInX');    		
+    		$('.gameOver').fadeOut(1000);    		  		
         	reset();
         	});
 
     $('.question').submit(function(event) {
         event.preventDefault();
+        // var regex=/^[0-9]+$/;
         var input = $('input[name=solution]:checked').val();
-        // console.log(input);
+        console.log(input);
         userAnswers.push(input);
         console.log(userAnswers + " pushed");
         checkAnswers(Quiz.questions[questionNum], input);
         questionNum++;
-        if (questionNum >= Quiz.questions.length) {
+        if (questionNum >= Quiz.questions.length)  {
         	$(Quiz.questions[questionNum]).hide();
-        	// $('.gameOver').removeClass('animated bounceOutLeft');
-        	$('.gameOver').text("That's all folks!  Click 'New Game' to play again.").fadeIn(1000);
-        	// $('.newgame').fadeIn(2000);        	
-            // give feedback? tell them it is the end
+        	
+        	$('.gameOver').text("That wasn't so hard was it? Click 'New Game' to play again.").fadeIn(1000);
+        	
         } else {
         	// $('.content').removeClass('animated zoomIn')
             $('#questionNum').text(questionNum);
@@ -217,34 +219,37 @@ $('.start').fadeIn(500);
     function checkAnswers(question, input) {
         if (question !== undefined) {           //This happens when user has reached the last question.
             if (input == question.answer) {
-                $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(500);
-                $('.userFeedback').fadeOut(500);
+                $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(1000);
+                $('.userFeedback').fadeOut(1000);
                 score++;
                 $('#score').text(score);
                 // return true;
             } else if (isNaN(input)) {
-                alert("Please make a selection.")
+            	$('.userFeedback').text("You gotta choose something, man. ").fadeIn(1000);
+            	$('.userFeedback').fadeOut(1000);                
                     // return false;
             }
-        } else {
-            // $('.userFeedback-incorrect').fadeIn(2000);
-            // $('.userFeedback-incorrect').fadeOut(2000);
+         else {
+            $('.userFeedback').text("Sorry, the capital is " + question.solutions.indexOf(question.answer).toString()).fadeIn(1000);
+            $('.userFeedback').fadeOut(1000);
             // return false;
-            alert('Wrong answer!')
+            
         };
-
+    	}
     };
 
 
 
     function reset(){
     score = 0;
+    $('#score').text(score);
     questionNum = 0;
     userAnswers = [];
     currentQuestion = 0;
     totalQuestions = Quiz.questions.length;
     chosenQuestions = [];
     // $('.gameOver').hide();
+    $('.quiz-title').animateCss('animated pulse');
     $('#scoreCount').animateCss('flipInX');
 	$('#questionCount').animateCss('flipInX');
     setTimeout(function(){
