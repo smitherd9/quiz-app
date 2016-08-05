@@ -107,7 +107,7 @@ var Quiz = {
         }, {
             question: "What is the capital of Turkmenistan?",
             solutions: ['Turkmen City', 'Ashgabat', 'Baghdad', 'Tripoli'],
-            answer: 3
+            answer: 1
 
         } 
 
