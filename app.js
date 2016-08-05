@@ -148,7 +148,7 @@ $(document).ready(function() {
 
     
 
-    // TODO: Make functions chosen randomly, store them in array and check the array for previously
+    // TODO: Make questions chosen randomly, store them in array and check the array for previously
     // asked questions
 
 
@@ -191,7 +191,7 @@ $(document).ready(function() {
 
     $('.question').submit(function(event) {
         event.preventDefault();
-        // var regex=/^[0-9]+$/;
+        
         var input = $('input[name=solution]:checked').val();
         console.log(input);
         userAnswers.push(input);
@@ -203,18 +203,14 @@ $(document).ready(function() {
 
                 $('.gameOver').text("That wasn't so hard was it? Click 'New Game' to play again.").fadeIn(1000);
 
-            } else {
-                // $('.content').removeClass('animated zoomIn')
+            } else {                
                 $('#questionNum').text(questionNum);
                 setTimeout(function() {
                     createQuestion(Quiz.questions[questionNum]);
                 }, 300);
 
             }
-        }
-
-
-        
+        }        
 
     });
 
@@ -238,7 +234,7 @@ $(document).ready(function() {
                 $('.userFeedback').text("Sorry, the capital is " + question.solutions[question.answer]).fadeIn(1000);
                 $('.userFeedback').fadeOut(1000);
                 return true;
-                // return;
+                
 
             };
         }
@@ -253,8 +249,7 @@ $(document).ready(function() {
         userAnswers = [];
         currentQuestion = 0;
         totalQuestions = Quiz.questions.length;
-        chosenQuestions = [];
-        // $('.gameOver').hide();
+        chosenQuestions = [];        
         $('.quiz-title').animateCss('animated pulse');
         $('#scoreCount').animateCss('flipInX');
         $('#questionCount').animateCss('flipInX');
