@@ -17,99 +17,99 @@ var Quiz = {
             question: "What is the capital of Indonesia?",
             solutions: ['Singapore', 'Jakarta', 'Ulaanbaatar', 'Kyoto'],
             answer: 1
-        },
+        
 
-        // }, {
-        //     question: "What is the capital of Brazil?",
-        //     solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
-        //     answer: 3            
+        }, {
+            question: "What is the capital of Brazil?",
+            solutions: ['Rio de Janiero', 'Caracas', 'Havana', 'Brasilia'],
+            answer: 3            
 
-        // }, {
-        //     question: "What is the capital of Estonia?",
-        //     solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
-        //     answer: 1
+        }, {
+            question: "What is the capital of Estonia?",
+            solutions: ['Moscow', 'Tallinn', 'Warsaw', 'Riga'],
+            answer: 1
 
-        // }, {
-        //     question: "What is the capital of Peru?",
-        //     solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
-        //     answer: 2
+        }, {
+            question: "What is the capital of Peru?",
+            solutions: ['Cuzco', 'Santiago', 'Lima', 'Casablanca'],
+            answer: 2
 
-        // }, {
-        //     question: "The capital of Laos is ",
-        //     solutions: ['Anchorage', 'Hanoi', 'Vientiane', 'Beirut'],
-        //     answer: 2
+        }, {
+            question: "The capital of Laos is ",
+            solutions: ['Anchorage', 'Hanoi', 'Vientiane', 'Beirut'],
+            answer: 2
 
-        // }, {
-        //     question: "The capital of Liberia is ",
-        //     solutions: ['Monrovia', 'Pristina', 'Atlanta', 'Sicily'],
-        //     answer: 0
+        }, {
+            question: "The capital of Liberia is ",
+            solutions: ['Monrovia', 'Pristina', 'Atlanta', 'Sicily'],
+            answer: 0
 
-        // }, {
-        //     question: "What is the capital of the United Kingdom?",
-        //     solutions: ['Seattle', 'Toronto', 'Rome', 'London'],
-        //     answer: 3
+        }, {
+            question: "What is the capital of the United Kingdom?",
+            solutions: ['Seattle', 'Toronto', 'Rome', 'London'],
+            answer: 3
 
-        // }, {
-        //     question: "What is the capital of Jordan?",
-        //     solutions: ['Amman', 'Damascus', 'Kingston', 'San Diego'],
-        //     answer: 0
+        }, {
+            question: "What is the capital of Jordan?",
+            solutions: ['Amman', 'Damascus', 'Kingston', 'San Diego'],
+            answer: 0
 
-        // }, {
-        //     question: "What is the capital of Honduras?",
-        //     solutions: ['Budapest', 'Dublin', 'Tegucigalpa', 'Varanasi'],
-        //     answer: 2
+        }, {
+            question: "What is the capital of Honduras?",
+            solutions: ['Budapest', 'Dublin', 'Tegucigalpa', 'Varanasi'],
+            answer: 2
 
-        // }, {
-        //     question: "What is the capital of Kyrgyzstan?",
-        //     solutions: ['Moscow', 'Maseru', 'Vaduz', 'Bishkek'],
-        //     answer: 3
+        }, {
+            question: "What is the capital of Kyrgyzstan?",
+            solutions: ['Moscow', 'Maseru', 'Vaduz', 'Bishkek'],
+            answer: 3
 
-        // }, {
-        //     question: "The capital of Equatorial Guinea is ",
-        //     solutions: ['Helsinki', 'Malabo', 'Banjul', 'Riga'],
-        //     answer: 1
+        }, {
+            question: "The capital of Equatorial Guinea is ",
+            solutions: ['Helsinki', 'Malabo', 'Banjul', 'Riga'],
+            answer: 1
 
-        // }, {
-        //     question: "The capital of Ghana is ",
-        //     solutions: ['Accra', 'Tallinn', 'Suva', 'Tbilisi'],
-        //     answer: 0
+        }, {
+            question: "The capital of Ghana is ",
+            solutions: ['Accra', 'Tallinn', 'Suva', 'Tbilisi'],
+            answer: 0
 
-        // }, {
-        //     question: "What is the capital of Djibouti?",
-        //     solutions: ['Roseau', 'Djibouti', 'Nicosia', 'Quito'],
-        //     answer: 1
+        }, {
+            question: "What is the capital of Djibouti?",
+            solutions: ['Roseau', 'Djibouti', 'Nicosia', 'Quito'],
+            answer: 1
 
-        // }, {
-        //     question: "What is the capital of Burkina Faso?",
-        //     solutions: ['Sofia', 'Ottawa', 'Sarajevo', 'Ouagadougou'],
-        //     answer: 3
+        }, {
+            question: "What is the capital of Burkina Faso?",
+            solutions: ['Sofia', 'Ottawa', 'Sarajevo', 'Ouagadougou'],
+            answer: 3
 
-        // }, {
-        //     question: "What is the capital of Oman?",
-        //     solutions: ['Suva', 'Asmara', 'Addis Ababa', 'Muscat'],
-        //     answer: 3
+        }, {
+            question: "What is the capital of Oman?",
+            solutions: ['Suva', 'Asmara', 'Addis Ababa', 'Muscat'],
+            answer: 3
 
-        // }, {
-        //     question: "What is the capital of Australia?",
-        //     solutions: ['Canberra', 'Ottawa', 'Sydney', 'Karachi'],
-        //     answer: 0
+        }, {
+            question: "What is the capital of Australia?",
+            solutions: ['Canberra', 'Ottawa', 'Sydney', 'Karachi'],
+            answer: 0
 
-        // }, {
-        //     question: "What is the capital of Tajikistan?",
-        //     solutions: ['Reykjavik', 'Dushanbe', 'Taipei', 'Dodoma'],
-        //     answer: 1
+        }, {
+            question: "What is the capital of Tajikistan?",
+            solutions: ['Reykjavik', 'Dushanbe', 'Taipei', 'Dodoma'],
+            answer: 1
 
-        // }, {
-        //     question: "The capital of Uganda is ",
-        //     solutions: ['Edinburgh', 'Port Vila', 'Montevideo', 'Kampala'],
-        //     answer: 3
+        }, {
+            question: "The capital of Uganda is ",
+            solutions: ['Edinburgh', 'Port Vila', 'Montevideo', 'Kampala'],
+            answer: 3
 
-        // }, {
-        //     question: "What is the capital of Turkmenistan?",
-        //     solutions: ['Turkmen City', 'Ashgabat', 'Baghdad', 'Tripoli'],
-        //     answer: 3
+        }, {
+            question: "What is the capital of Turkmenistan?",
+            solutions: ['Turkmen City', 'Ashgabat', 'Baghdad', 'Tripoli'],
+            answer: 3
 
-        // } 
+        } 
 
 
 
@@ -118,8 +118,7 @@ var Quiz = {
 };
 
 $(document).ready(function() {
-    $('.startScreen').show();
-    // $('.startScreen').fadeIn(1000);
+    $('.startScreen').show();    
     $('.newgame').hide();
     $('.start').fadeIn(500);
 
@@ -134,22 +133,28 @@ $(document).ready(function() {
         createQuestion(Quiz.questions[questionNum]);
     });
 
-    // randomQuestion();
-
-    // question1();
+    
 
     //Global Variables
     var score = 0;
     var questionNum = 0;
     var userAnswers = [];
-    var randomQ;
+    // var randomQ;
     var currentQuestion = 0;
     var totalQuestions = Quiz.questions.length;
     var chosenQuestions = [];
     $('#totalQuestions').text(totalQuestions);
 
-    // Choose a question from the questions array at random
 
+    
+
+    // TODO: Make functions chosen randomly, store them in array and check the array for previously
+    // asked questions
+
+
+
+
+    // Choose a question from the questions array at random
     // function randomQuestion() {
     //     randomQ = Quiz.questions[Math.floor(Math.random() * Quiz.questions.length)];
     //     console.log(randomQ);
@@ -209,12 +214,7 @@ $(document).ready(function() {
         }
 
 
-
-        // create the second question, the third, 
-
-        // randomQuestion();
-
-        // nextQuestion();
+        
 
     });
 
@@ -264,36 +264,7 @@ $(document).ready(function() {
 
     };
 
-
-
-
-
-
-    // function animations(){
-    //  var animationName = '';
-    //  var animationEnd = '';
-    // }
-    // function nextQuestion() {
-    //     if (questionNum < Quiz.questions.length) {
-    //         $('<h2>' + randomQ.question + '</h2>').replaceAll('.content');
-    //         $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + randomQ.solutions[0] + "</span><br/>");
-    //         $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + randomQ.solutions[1] + "</span><br/>");
-    //         $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + randomQ.solutions[2] + "</span><br/>");
-    //         $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + randomQ.solutions[3] + "</span><br/>");
-
-    //     }
-
-    //$('.content').append('<h2>' + randomQ.question + '</h2>');
-    //  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
-    //  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
-
-
-
-    // $('.submit').click(){
-
-    // }
+    
 
     function createQuestion(question) {
         // if (questionNum < totalQuestions && chosenQuestions.indexOf(randomQ) == -1) {
@@ -338,46 +309,3 @@ $(document).ready(function() {
 
 
 
-// function question2(){
-//  $('<h2>' + Quiz.questions[1].question + '</h2>').replaceAll('.content');
-//  $("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>").replaceAll('.content');
-//  $("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>").replaceAll('.content');
-//  $("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>").replaceAll('.content');
-//  $("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>").replaceAll('.content');
-
-//  // $('.content').append('<h2>' + Quiz.questions[1].question + '</h2>');
-//  //    $('.content').append("<input type='radio' value='0' name='solution'>" + "<span>" + Quiz.questions[1].solutions[0] + "</span><br/>");
-//  //    $('.content').append("<input type='radio' value='1' name='solution'>" + "<span>" + Quiz.questions[1].solutions[1] + "</span><br/>");
-//  //    $('.content').append("<input type='radio' value='2' name='solution'>" + "<span>" + Quiz.questions[1].solutions[2] + "</span><br/>");
-//  //    $('.content').append("<input type='radio' value='3' name='solution'>" + "<span>" + Quiz.questions[1].solutions[3] + "</span>");
-// };
-
-
-
-
-
-
-
-
-// 
-//     
-//     var input = parseInt($('#userGuess').val(), 10); // Submit the form, parse the actual input number
-//     // check to see whether input exists in some guesses array.
-//     // if it is not there, then push it to the global array
-
-//     $('#userGuess').val("");
-
-
-// $('.congo').submit(function(event) {
-//     event.preventDefault();
-
-//     if $('input[name=radioName]:checked', '.congo').val() {
-//         alert("You are correct!");
-//     }
-
-//     else {
-//         alert("Try again!");
-//     };
-
-
-// });
