@@ -107,30 +107,30 @@ Quiz.prototype.checkAnswers = function(question, input) {
     // console.log('You checkin answers, bro.');
     console.log(questions[questionNum].answer);
     if (input == questions[questionNum].answer) {
-        $('.userFeedback').text("Great Job! That's the correct answer!").show().animateCss('slideInLeft');
-        setTimeout(function(){
-            $('.userFeedback').animateCss('fadeOutLeft');
-        }, 500);
-        $('.userFeedback').hide();
+        $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(1000);   //.show().animateCss('slideInLeft');
+        // setTimeout(function(){
+        //     $('.userFeedback').animateCss('fadeOutLeft');
+        // }, 500);
+        // $('.userFeedback').hide();
         // $('.userFeedback').animateCss('slideInLeft');
         // $('.userFeedback').animateCss('fadeOutLeft');
         // setTimeout(function(){
         //     $('.userFeedback').fadeOut(1000);
         // }, 500);
-        // $('.userFeedback').fadeOut(1000);
+        $('.userFeedback').fadeOut(1000);
         score++;
         $('#score').text(score);
         return true;
     } else if (isNaN(input)) {
-        $('.userFeedback').text("You gotta choose something, man.");    //.fadeIn(1000);
-        $('.userFeedback').animateCss('slideInLeft');
+        $('.userFeedback').text("You gotta choose something, man.").fadeIn(1000);
+        // $('.userFeedback').animateCss('slideInLeft');
         $('.userFeedback').fadeOut(1000);
         return false;
 
         // return; // stops the function in its tracks
     } else if (input != questions[questionNum].answer) {
-        $('.userFeedback').text("Sorry, the capital is " + questions[questionNum].solutions[questions[questionNum].answer]);    //.fadeIn(1000);
-        $('.userFeedback').animateCss('slideInLeft');
+        $('.userFeedback').text("Sorry, the capital is " + questions[questionNum].solutions[questions[questionNum].answer]).fadeIn(1000);
+        // $('.userFeedback').animateCss('slideInLeft');
         $('.userFeedback').fadeOut(1000);
         return true;
 
@@ -204,159 +204,6 @@ $(document).ready(function() {
                                                                     // });
 
     $('.question').submit(quiz.submit.bind(quiz));
-
-
-
-    // $('.start').click(function() {
-    //     $('.startScreen').fadeOut(1000);
-    //     $('.quiz-title').animateCss('animated pulse');
-    //     $('#scoreCount').animateCss('flipInX');
-    //     $('#questionCount').animateCss('flipInX');
-    //     $('.newgame').show();
-    //     createQuestion(Quiz.questions[questionNum]);
-    // });
-
-
-
-    //Global Variables
-    // var score = 0;
-    // // var questionNum = 0;
-    // // var userAnswers = [];
-    // // var randomQ;
-    // // var inputValue;
-    // // var currentQuestion = 0;
-    // // var totalQuestions = Quiz.questions.length;
-    // // var chosenQuestions = [];
-    // $('#totalQuestions').text(totalQuestions);
-
-
-
-
-    // TODO: Make questions chosen randomly, store them in array and check the array for previously
-    // asked questions
-
-
-
-
-    // Choose a question from the questions array at random
-    // function randomQuestion() {
-    //     randomQ = Quiz.questions[Math.floor(Math.random() * Quiz.questions.length)];
-    //     console.log(randomQ);
-
-    //     // $('.content').append('<h2>' + randomQ.question.solutions + '</h2>');
-    //     createQuestion();
-
-
-    // };
-    // var currentQuestion = Quiz.questions[0];
-
-    // question1();
-
-
-
-    
-
-
-    // Event listener and function for New Game button click
-
-    // $('.newgame').click(function() {
-    //     $('.gameOver').fadeOut(1000);
-    //     var reset = quiz.reset.bind(quiz);
-    // });
-
-    // $('.question').submit(quiz.submit.bind(quiz));
-
-    // $('.question').submit(function(event) {
-    //     event.preventDefault();
-    //     getInput();
-
-    //     // var input = $('input[name=solution]:checked').val();
-    //     // console.log(input);
-    //     // userAnswers.push(input);
-    //     // console.log(userAnswers + " pushed");
-    //     if (checkAnswers(Quiz.questions[questionNum], input)) {
-    //         questionNum++;
-    //         if (questionNum >= Quiz.questions.length) {
-    //             $(Quiz.questions[questionNum]).hide();
-
-    //             $('.gameOver').text("That wasn't so hard was it? Click 'New Game' to play again.").fadeIn(1000);
-
-    //         } else {                
-    //             $('#questionNum').text(questionNum);
-    //             setTimeout(function() {
-    //                 createQuestion(Quiz.questions[questionNum]);
-    //             }, 300);
-
-    //         }
-    //     }        
-
-    // });
-
-
-
-    // Gets the answer from the user and pushes it to userAnswers array // 
-
-
-    // function getInput() {
-    //     var input = $('input[name=solution]:checked').val();
-    //     userAnswers.push(input);
-    //     console.log(userAnswers + " pushed");
-    //     inputValue = input;
-    //     console.log(input);
-    // }
-
-
-
-
-    // Checks if user answer is correct, NaN, or incorrect and responds with feedback // 
-
-
-
-    // function checkAnswers(question, input) {
-    //     if (question !== undefined) { //This happens when user has reached the last question.
-    //         console.log(input != question.answer, "test");
-    //         if (input == question.answer) {
-    //             $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(1000);
-    //             $('.userFeedback').fadeOut(1000);
-    //             score++;
-    //             $('#score').text(score);
-    //             return true;
-    //         } else if (isNaN(input)) {
-    //             $('.userFeedback').text("You gotta choose something, man. ").fadeIn(1000);
-    //             $('.userFeedback').fadeOut(1000);
-    //             return false;
-
-    //             // return; // stops the function in its tracks
-    //         } else if (input != question.answer) {
-    //             // if ()
-    //             $('.userFeedback').text("Sorry, the capital is " + question.solutions[question.answer]).fadeIn(1000);
-    //             $('.userFeedback').fadeOut(1000);
-    //             return true;
-
-
-    //         };
-    //     }
-    // };
-
-
-
-
-
-
-    // function createQuestion(question) {
-    //     // if (questionNum < totalQuestions && chosenQuestions.indexOf(randomQ) == -1) {
-    //     // chosenQuestions.push(randomQ); // Store already asked questions in array to not ask them again.
-    //     // console.log(chosenQuestions);
-    //     $('#questionNum').text(questionNum + 1);
-    //     $('.content').text('');
-    //     $('.content').animateCss('zoomIn');
-    //     $('.content').append('<h2>' + question.question + '</h2>');
-    //     $('.content').append("<input type='radio' value='0' name='solution'><span>" + question.solutions[0] + "</span><br/>");
-    //     $('.content').append("<input type='radio' value='1' name='solution'><span>" + question.solutions[1] + "</span><br/>");
-    //     $('.content').append("<input type='radio' value='2' name='solution'><span>" + question.solutions[2] + "</span><br/>");
-    //     $('.content').append("<input type='radio' value='3' name='solution'><span>" + question.solutions[3] + "</span>");
-    //     // }
-    // };
 
 
 });
