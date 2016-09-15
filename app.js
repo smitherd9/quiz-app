@@ -59,7 +59,8 @@ Quiz.prototype.submit = function(event) {
         if (questionNum >= this.questions.length) {
             $(this.questions[questionNum]).hide();
 
-            $('.gameOver').text("That wasn't so hard was it? Click 'New Game' to play again.").fadeIn(1000);
+            $('.gameOver').append('<p>' + 'Your final score was ' + score + ' out of ' + totalQuestions + '</p>' + '<p>' + 'Click "New Game" to play again.' + '</p>').fadeIn(1000);
+            // $('.gameOver').animateCss('bounceInDown');
 
         } else {
             $('#questionNum').text(questionNum);
@@ -195,15 +196,17 @@ $(document).ready(function() {
     $('.newgame').click(function() {
         $('.gameOver').fadeOut(1000);
         // quiz.reset.bind(quiz);
+        quiz.reset();
     });
 
-    $('.newgame').click(quiz.reset.bind(quiz));               // Why not?       
+    // $('.newgame').click(quiz.reset.bind(quiz));               // Why not?       
                                                             //      $('.newgame').click(function() {
                                                                     //     $('.gameOver').fadeOut(1000);
                                                                     //         // quiz.reset.bind(quiz);
                                                                     // });
 
-    $('.question').submit(quiz.submit.bind(quiz));
-
+    $('.question').submit(quiz.submit.bind(quiz));                  // On line 207 I'm passing a function to the submit
+                                                                    // function but on 198, I'm just calling a function
+                                                                    // within the $('.newgame').click function
 
 });
