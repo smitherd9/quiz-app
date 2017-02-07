@@ -1,0 +1,23 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "world capitals quiz for Thinkful",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smitherd9/quiz-app.git"
+  },
+  "author": "Daniel Smither",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smitherd9/quiz-app/issues"
+  },
+  "homepage": "https://github.com/smitherd9/quiz-app#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "jquery": "^3.1.0"
+  }
+}
