@@ -24,10 +24,6 @@ var QuizQuestions = function(question, solutions, answer) {
 
 
 QuizQuestions.prototype.display = function() {
-    // if (questionNum < totalQuestions && chosenQuestions.indexOf(randomQ) == -1) {
-    // chosenQuestions.push(randomQ); // Store already asked questions in array to not ask them again.
-    // console.log(chosenQuestions);
-    //$('#questionNum').text(questionNum + 1);
     $('.content').text('');
     $('.content').animateCss('zoomIn');
     $('.content').append('<h2>' + this.question + '</h2>');
@@ -35,7 +31,6 @@ QuizQuestions.prototype.display = function() {
     $('.content').append("<input type='radio' value='1' name='solution'><span>" + this.solutions[1] + "</span><br/>");
     $('.content').append("<input type='radio' value='2' name='solution'><span>" + this.solutions[2] + "</span><br/>");
     $('.content').append("<input type='radio' value='3' name='solution'><span>" + this.solutions[3] + "</span>");
-    // }
 };
 
 
@@ -58,9 +53,7 @@ Quiz.prototype.submit = function(event) {
         questionNum++;
         if (questionNum >= this.questions.length) {
             $(this.questions[questionNum]).hide();
-
             $('.gameOver').append('<p>' + 'Your final score was ' + score + ' out of ' + totalQuestions + '</p>' + '<p>' + 'Click "New Game" to play again.' + '</p>').fadeIn(1000);
-            // $('.gameOver').animateCss('bounceInDown');
 
         } else {
             $('#questionNum').text(questionNum);
@@ -89,7 +82,6 @@ Quiz.prototype.reset = function() {
     questionNum = 0;
     userAnswers = [];
     currentQuestion = 0;
-    // totalQuestions = Quiz.questions.length;
     chosenQuestions = [];
     $('.quiz-title').animateCss('animated pulse');
     $('#scoreCount').animateCss('flipInX');
@@ -103,35 +95,21 @@ Quiz.prototype.reset = function() {
 
 
 Quiz.prototype.checkAnswers = function(question, input) {
-    // if (question !== undefined) { //This happens when user has reached the last question.
-    //     console.log(input != question.answer, "test");
-    // console.log('You checkin answers, bro.');
     console.log(questions[questionNum].answer);
     if (input == questions[questionNum].answer) {
-        $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(1000);   //.show().animateCss('slideInLeft');
-        // setTimeout(function(){
-        //     $('.userFeedback').animateCss('fadeOutLeft');
-        // }, 500);
-        // $('.userFeedback').hide();
-        // $('.userFeedback').animateCss('slideInLeft');
-        // $('.userFeedback').animateCss('fadeOutLeft');
-        // setTimeout(function(){
-        //     $('.userFeedback').fadeOut(1000);
-        // }, 500);
+        $('.userFeedback').text("Great Job! That's the correct answer!").fadeIn(1000);   
         $('.userFeedback').fadeOut(1000);
         score++;
         $('#score').text(score);
         return true;
     } else if (isNaN(input)) {
         $('.userFeedback').text("You gotta choose something, man.").fadeIn(1000);
-        // $('.userFeedback').animateCss('slideInLeft');
         $('.userFeedback').fadeOut(1000);
         return false;
 
         // return; // stops the function in its tracks
     } else if (input != questions[questionNum].answer) {
         $('.userFeedback').text("Sorry, the capital is " + questions[questionNum].solutions[questions[questionNum].answer]).fadeIn(1000);
-        // $('.userFeedback').animateCss('slideInLeft');
         $('.userFeedback').fadeOut(1000);
         return true;
 
@@ -190,23 +168,13 @@ $(document).ready(function() {
     $('#intro').animateCss('fadeInDown');
 
     $('.start').click(quiz.start.bind(quiz));
-    // var totalQuestions = QuizQuestions.question.length;
     $('#totalQuestions').text(totalQuestions);
 
     $('.newgame').click(function() {
         $('.gameOver').fadeOut(1000);
-        // quiz.reset.bind(quiz);
         quiz.reset();
     });
 
-    // $('.newgame').click(quiz.reset.bind(quiz));               // Why not?       
-                                                            //      $('.newgame').click(function() {
-                                                                    //     $('.gameOver').fadeOut(1000);
-                                                                    //         // quiz.reset.bind(quiz);
-                                                                    // });
 
-    $('.question').submit(quiz.submit.bind(quiz));                  // On line 207 I'm passing a function to the submit
-                                                                    // function but on 198, I'm just calling a function
-                                                                    // within the $('.newgame').click function
-
+    $('.question').submit(quiz.submit.bind(quiz));                 
 });
